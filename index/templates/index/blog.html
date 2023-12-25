@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div id="fh5co-blog">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>Maqolalar &amp; Tadbirlar</h2>
+                <p>Biz juda faolmiz</p>
+            </div>
+        </div>
+        <div class="row row-padded-mb">
+            {% comment %} some blogs {% endcomment %}
+            {% for blog in blogs %}
+            <div class="col-md-4 animate-box">
+                <div class="fh5co-event">
+                    <div class="date text-center"><span>{{blog.date.day}}<br>{{blog.date.month}}</span></div>
+                    <h3><a href="#"></a></h3>
+                    <p>{{ blog.ccontent }}</p>
+                    <p><a href="#">To'liq</a></p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            {% comment %} Events {% endcomment %}
+            {% for event in events %}
+            <div class="col-lg-4 col-md-4">
+                <div class="fh5co-blog animate-box">
+                    <a href="#" class="blog-img-holder" style="background-image: url({{event.img_webp.url}});"></a>
+                    <div class="blog-text">
+                        <h3><a href="#">{{event.title}}</a></h3>
+                        <span class="posted_on">{{event.date.day}} {{event.date.month}}</span>
+                        <p>{{event.content}}</p>
+                    </div> 
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

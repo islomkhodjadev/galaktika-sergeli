@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="fh5co-about">
+    <div class="container">
+        <div class="col-md-6 animate-box">
+            <span>Bizning o'quv markazi haqiday</span>
+            <h2>{{about.welcome}}</h2>
+            <p>{{about.content}}</p>
+            
+        </div>
+        <div class="col-md-6">
+            <img class="img-responsive" src="{{ about.img_webp.url }}" alt="RASM">
+        </div>
+    </div>
+</div>
+
+<div id="fh5co-counter" class="fh5co-counters" style="background-image: url(images/img_bg_4.jpg);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                    {% comment %} Leaners count {% endcomment %}
+                    {% for count in counts %}
+                    <div class="col-md-3 col-sm-6 text-center animate-box">
+                        <span class="icon"><i class="icon-world"></i></span>
+                        <span class="fh5co-counter js-counter" data-from="0" data-to="{{count.count}}" data-speed="5000" data-refresh-interval="50"></span>
+                        <span class="fh5co-counter-label">{{count.type}}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="fh5co-gallery" class="fh5co-bg-section">
+    <div class="row text-center">
+        <h2><span>Rasmlar</span></h2>
+    </div>
+    <div class="row">
+        {% comment %} Gallery {% endcomment %}
+        {% for event in events %}
+        <div class="col-md-3 col-padded">
+            <a href="#" class="gallery" style="background-image: url({{event.img_webp.url}});"></a>
+        </div>
+        {% endfor %}
+        
+    </div>
+</div>
+{% endblock %}
