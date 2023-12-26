@@ -10,15 +10,15 @@
                 <div class="staff">
                     <div class="staff-img" style="background-image: url({{teacher.img_webp.url}});">
                         <ul class="fh5co-social">
-                            <li><a href="{{teacher.telegram.url}}"><i class="icon-telegram"></i></a></li>
-                            <li><a href="{{teacher.instagram.url}}"><i class="icon-instagram"></i></a></li>
-                            <li><a href="{{teacher.facebook.url}}"><i class="icon-facebook2"></i></a></li>
-                            <li><a href="{{teacher.twitter.url}}"><i class="icon-twitter2"></i></a></li>
-                            <li><a href="{{teacher.github.url}}"><i class="icon-github"></i></a></li>
+                            <li><a href="{{teacher.telegram}}"><i class="icon-telegram"></i></a></li>
+                            <li><a href="{{teacher.instagram}}"><i class="icon-instagram"></i></a></li>
+                            <li><a href="{{teacher.facebook}}"><i class="icon-facebook2"></i></a></li>
+                            <li><a href="{{teacher.twitter}}"><i class="icon-twitter2"></i></a></li>
+                            <li><a href="{{teacher.github}}"><i class="icon-github"></i></a></li>
                         </ul>
                     </div>
                     <span>{{teacher.name}}</span>
-                    <h3><a href="#">Yozilish</a></h3>
+                    <h3><a href="{% url "contact" %}">Yozilish</a></h3>
                     <p>{{teacher.about}}</p>
                 </div>
             </div>

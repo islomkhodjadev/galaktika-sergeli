@@ -35,9 +35,9 @@
 	{% include "index/links/links.html" %}
 
 	</head>
-	<body>
-		
-	<div class="fh5co-loader"></div>
+
+<body>
+	
 	
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
@@ -87,7 +87,7 @@
 							   <div class="slider-text-inner">
 								   <h1>{{q.quote}}</h1>
 								   
-									<p><a class="btn btn-primary btn-lg" href="#">O'qishni boshlash</a></p>
+									<p><a class="btn btn-primary btn-lg" href="{% url 'contact' %}">O'qishni boshlash</a></p>
 							   </div>
 						   </div>
 					   </div>
@@ -140,5 +140,6 @@
 
 
 {% include "index/links/scripts.html"%}
+
 </body>
 </html>
